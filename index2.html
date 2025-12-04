@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КІНОВОЛЯ - Кінотеатр у Львові</title>
+    
+    <!-- Фавіконки -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/logo.svg">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Верхній хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <!-- Логотип -->
+                <div class="logo">
+                    <a href="index1.html">
+                        <img src="images/logo.svg" alt="КІНОВОЛЯ - Логотип" class="logo-img">
+                        <h1>КІНОВОЛЯ</h1>
+                    </a>
+                </div>
+
+                <!-- Навігація -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index1.html" >Головна</a></li>
+                        <li><a href="index2.html"class="active">Фільми</a></li>
+                        <li><a href="index3.html">Про нас</a></li>
+                        <li><a href="index4.html">Допомога</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Телефон та кнопка -->
+                <div class="header-actions">
+                    <div class="phone-display">
+                        +380 68 68 66 868
+                    </div>
+                    <div class="btn-contact-container">
+                        <a href="index4.html#contact-form" class="btn-contact">
+                            Зв'язатись
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<main class="main-content">
+        <div class="container">
+            <div class="movies-catalog">
+                <div class="catalog-header">
+                    <h2><i class="fas fa-film"></i> Каталог фільмів</h2>
+                    <p>Обирайте найкращі фільми для перегляду у нашому кінотеатрі</p>
+                </div>
+                
+                <!-- Розділ "Зараз у кіно" -->
+                <section class="movies-section">
+                    <h3 class="section-title"><i class="fas fa-ticket-alt"></i> Зараз у кіно</h3>
+                    <div id="now-showing-container">
+                        <!-- Фільми будуть завантажені через JavaScript -->
+                        <div class="loading">
+                            <i class="fas fa-spinner fa-spin"></i> Завантаження фільмів...
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Розділ "Скоро у кіно" -->
+                <section class="movies-section">
+                    <h3 class="section-title"><i class="fas fa-calendar-alt"></i> Скоро у кіно</h3>
+                    <p class="no-tickets-msg"><i class="fas fa-info-circle"></i> Квитків ще немає у продажі</p>
+                    <div id="coming-soon-container">
+                        <!-- Фільми будуть завантажені через JavaScript -->
+                        <div class="loading">
+                            <i class="fas fa-spinner fa-spin"></i> Завантаження фільмів...
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальне вікно для трейлера -->
+    <div id="trailer-modal" class="trailer-modal">
+        <div class="trailer-modal-content">
+            <button class="close-trailer">&times;</button>
+            <div class="trailer-video-container">
+                <iframe id="trailer-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Верхня частина футера -->
+            <div class="footer-top">
+                <div class="footer-grid">
+                    <!-- Колонка 1: Контактна інформація -->
+                    <div class="footer-column">
+                        <div class="footer-logo-section">
+                            <img src="images/logo.svg" alt="КІНОВОЛЯ - Логотип" class="footer-logo-img">
+                            <h2 class="footer-logo-text">КІНОВОЛЯ</h2>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-label">м. Львів, вул. Кіноплівкова, 7</div>
+                                <div class="contact-subtext">КІНОВОЛЯ Центр</div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-label">Графік роботи:</div>
+                                <div class="contact-subtext">Пн-Нд: 10:00 - 23:00</div>
+                                <div class="contact-subtext">Каса: 10:00 - 22:30</div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-label">Електронна пошта:</div>
+                                <div class="contact-subtext">dudanatala120499@gmail.com</div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-label">Телефон:</div>
+                                <div class="contact-subtext">+380 68 68 66 868</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Колонка 2: Навігація -->
+                    <div class="footer-column">
+                        <h3 class="column-title">Навігація</h3>
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="index1.html">Головна</a></li>
+                                <li><a href="index2.html">Фільми</a></li>
+                                <li><a href="index3.html">Про нас</a></li>
+                                <li><a href="index4.html">Допомога</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <!-- Колонка 3: Соціальні мережі та підписка -->
+                    <div class="footer-column">
+                        <h3 class="column-title">Соціальні мережі</h3>
+                        <div class="social-links">
+                            <a href="https://t.me/kinovolia_lviv" class="social-link" target="_blank">
+                                <span class="social-icon">📱</span>
+                                <span>Telegram</span>
+                            </a>
+                            <a href="https://www.instagram.com/nata__06_?igsh=MTJxaXdhenY0M2Iy" class="social-link" target="_blank">
+                                <span class="social-icon">📸</span>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.facebook.com/share/14Xd4yDfCMg/?mibextid=wwXIfr" class="social-link" target="_blank">
+                                <span class="social-icon">👥</span>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                        
+                        <div class="subscription-section">
+                            <h3 class="column-title">Підпишіться на оновлення</h3>
+                            <form class="subscription-form">
+                                <input type="email" placeholder="Ваша електронна пошта" required>
+                                <button type="submit">Підписатися</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Нижня частина футера -->
+            <div class="footer-bottom">
+               
+                    <div class="footer-bottom-left">
+                        <p class="copyright">&copy; 2024 КІНОВОЛЯ. Всі права захищені.</p>
+                    </div>
+                   
+               
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КІНОВОЛЯ - Кінотеатр у Львові</title>
+    
+    <!-- Фавіконки -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/logo.svg">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Верхній хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <!-- Логотип -->
+                <div class="logo">
+                    <a href="index1.html">
+                        <img src="images/logo.svg" alt="КІНОВОЛЯ - Логотип" class="logo-img">
+                        <h1>КІНОВОЛЯ</h1>
+                    </a>
+                </div>
+
+                <!-- Навігація -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index1.html" class="active">Головна</a></li>
+                        <li><a href="index2.html">Фільми</a></li>
+                        <li><a href="index3.html">Про нас</a></li>
+                        <li><a href="index4.html">Допомога</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Телефон та кнопка -->
+                <div class="header-actions">
+                    <div class="phone-display">
+                        +380 68 68 66 868
+                    </div>
+                    <div class="btn-contact-container">
+                        <a href="index4.html#contact-form" class="btn-contact">
+                            Зв'язатись
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основний слайдер (банерний) -->
+    <section class="hero-slider">
+        <div class="container">
+            <div class="slider-container">
+                <div class="slider" id="mainSlider">
+                    <!-- Слайд 1 -->
+                    <div class="slide active">
+                        <img src="images/photo1.jpg" alt="Кінотеатр КІНОВОЛЯ" class="slide-img">
+                        <div class="slide-content">
+                            <h2>Прем'єра тижня!</h2>
+                            <p class="movie-title">"Мавка. Справжній міф"</p>
+                            <p>Епічна драма про мужність та свободу. У прокаті з 15 червня</p>
+                            <a href="index4.html=" class="btn-slider">Забронювати квиток</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Слайд 2 -->
+                    <div class="slide">
+                        <img src="images/photo2.jpg" alt="4K кіно" class="slide-img">
+                        <div class="slide-content">
+                            <h2>Класика у новому форматі</h2>
+                            <p class="movie-title">4K реставрація</p>
+                            <p>Легендарні стрічки у якості, яку ви ще не бачили</p>
+                            <a href="index1.html" class="btn-slider">Розклад сеансів</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Слайд 3 -->
+                    <div class="slide">
+                        <img src="images/photo3.jpg" alt="Знижки у вівторок" class="slide-img">
+                        <div class="slide-content">
+                            <h2>Знижка 30%</h2>
+                            <p class="movie-title">ВІВТОРКИ - КІНОДНІ</p>
+                            <p>Щовівторка ексклюзивні сеанси зі знижкою для справжніх кіноманів</p>
+                            <a href="index2.html" class="btn-slider">Обрати фільм</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Кнопки слайдера -->
+                <button class="slider-btn prev-btn" onclick="prevSlide()">‹</button>
+                <button class="slider-btn next-btn" onclick="nextSlide()">›</button>
+                
+                <!-- Точки слайдера -->
+                <div class="slider-dots">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основний контент -->
+    <main class="main-content">
+        <div class="container">
+            <section class="welcome">
+                <h2>Ласкаво просимо до КІНОВОЛІ!</h2>
+                <p>Найкращий кінотеатр у серці Львова, де кожен сеанс — це подія. 
+                   У нас завжди свіжі прем'єри, комфортні зали та неперевершена атмосфера.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">🎬</div>
+                        <h3>5 сучасних залів</h3>
+                        <p>Долбі, 4K, комфортні крісла</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🛋️</div>
+                        <h3>VIP зона</h3>
+                        <p>Диван-зали для особливих переглядів</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🍿</div>
+                        <h3>Смачні снеки</h3>
+                        <p>Свіжий попкорн, напої, десерти</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🚗</div>
+                        <h3>Паркінг</h3>
+                        <p>Безкоштовний паркінг для відвідувачів</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секція "Кіно зараз" -->
+            <section class="now-playing">
+                <div class="section-header">
+                    <h2>🎬 Кіно зараз</h2>
+                    <a href="index2.html" class="view-more">Переглянути більше →</a>
+                </div>
+                
+                <div class="movies-slider-container">
+                    <div class="movies-slider" id="moviesSlider">
+                        <!-- Фільм 1 -->
+                        <div class="movie-slide">
+                            <div class="movie-card">
+                                <div class="movie-poster">
+                                    <img src="images/film1.jpg" alt="Однієї тихої ночі">
+                                    <div class="movie-badge premiere">Прем'єра</div>
+                                </div>
+                                <div class="movie-info">
+                                    <h3>Однієї тихої ночі</h3>
+                                    <div class="movie-details">
+                                        <span class="movie-genre">Горор</span>
+                                        <span class="movie-duration">90 хв</span>
+                                    </div>
+                                    <div class="movie-tags">
+                                        <span class="tag">16+</span>
+                                        <span class="tag">2D</span>
+                                        <span class="tag seats">64/120</span>
+                                    </div>
+                                    <div class="movie-showtimes">
+                                        <span class="showtime">14:30</span>
+                                        <span class="showtime">17:45</span>
+                                        <span class="showtime">20:15</span>
+                                    </div>
+                                    <div class="movie-actions">
+                                        <a href="index2.html#lion-heart" class="btn-movie-details">Деталі</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Фільм 2 -->
+                        <div class="movie-slide">
+                            <div class="movie-card">
+                                <div class="movie-poster">
+                                    <img src="images/film2.jpg" alt="Аватар: Вогонь і Попіл">
+                                    <div class="movie-badge classic">3D</div>
+                                </div>
+                                <div class="movie-info">
+                                    <h3>Аватар: Вогонь і Попіл</h3>
+                                    <div class="movie-details">
+                                        <span class="movie-genre">Наукова фантастика, Трилер, Фентезі, Пригоди, Екшн</span>
+                                        <span class="movie-duration">175 хв.</span>
+                                    </div>
+                                    <div class="movie-tags">
+                                        <span class="tag">16+</span>
+                                        <span class="tag">4K</span>
+                                        <span class="tag seats">89/120</span>
+                                    </div>
+                                    <div class="movie-showtimes">
+                                        <span class="showtime">15:00</span>
+                                        <span class="showtime">18:30</span>
+                                        <span class="showtime">21:45</span>
+                                    </div>
+                                    <div class="movie-actions">
+                                        <a href="index2.html#forrest-gump" class="btn-movie-details">Деталі</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Фільм 3 -->
+                        <div class="movie-slide">
+                            <div class="movie-card">
+                                <div class="movie-poster">
+                                    <img src="images/film3.jpg" alt="Потяг до Різдва">
+                                    <div class="movie-badge sci-fi">Sci-Fi</div>
+                                </div>
+                                <div class="movie-info">
+                                    <h3>Потяг до Різдва</h3>
+                                    <div class="movie-details">
+                                        <span class="movie-genre">Сімейний, Комедія</span>
+                                        <span class="movie-duration">90хв</span>
+                                    </div>
+                                    <div class="movie-tags">
+                                        <span class="tag">0+</span>
+                                        <span class="tag">IMAX</span>
+                                        <span class="tag seats">12/150</span>
+                                    </div>
+                                    <div class="movie-showtimes">
+                                        <span class="showtime">14:00</span>
+                                        <span class="showtime">17:15</span>
+                                        <span class="showtime">21:00</span>
+                                    </div>
+                                    <div class="movie-actions">
+                                        <a href="index2.html#matrix" class="btn-movie-details">Деталі</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <!-- Фільм 4 -->
+                        <div class="movie-slide">
+                            <div class="movie-card">
+                                <div class="movie-poster">
+                                    <img src="images/film4.jpg" alt="Снігова королева">
+                                    <div class="movie-badge sci-fi">Sci-Fi</div>
+                                </div>
+                                <div class="movie-info">
+                                    <h3>Снігова королева</h3>
+                                    <div class="movie-details">
+                                        <span class="movie-genre">Анімація</span>
+                                        <span class="movie-duration">85 хв.</span>
+                                    </div>
+                                    <div class="movie-tags">
+                                        <span class="tag">18+</span>
+                                        <span class="tag">IMAX</span>
+                                        <span class="tag seats">102/150</span>
+                                    </div>
+                                    <div class="movie-showtimes">
+                                        <span class="showtime">14:00</span>
+                                        <span class="showtime">17:15</span>
+                                        <span class="showtime">21:00</span>
+                                    </div>
+                                    <div class="movie-actions">
+                                        <a href="index2.html#matrix" class="btn-movie-details">Деталі</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Фільм 5 -->
+                        <div class="movie-slide">
+                            <div class="movie-card">
+                                <div class="movie-poster">
+                                    <img src="images/film5.jpg" alt="Ти - Космос">
+                                    <div class="movie-badge sci-fi">Sci-Fi</div>
+                                </div>
+                                <div class="movie-info">
+                                    <h3>Ти - Космос</h3>
+                                    <div class="movie-details">
+                                        <span class="movie-genre">
+Драма, Комедія, Наукова фантастика</span>
+                                        <span class="movie-duration">
+102 хв</span>
+                                    </div>
+                                    <div class="movie-tags">
+                                        <span class="tag">12+</span>
+                                        <span class="tag">IMAX</span>
+                                        <span class="tag seats">62/150</span>
+                                    </div>
+                                    <div class="movie-showtimes">
+                                        <span class="showtime">14:00</span>
+                                        <span class="showtime">17:15</span>
+                                        <span class="showtime">21:00</span>
+                                    </div>
+                                    <div class="movie-actions">
+                                        <a href="index2.html#matrix" class="btn-movie-details">Деталі</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Фільм 6 -->
+                        <div class="movie-slide">
+                            <div class="movie-card">
+                                <div class="movie-poster">
+                                    <img src="images/film6.jpg" alt="Зоотрополіс-2">
+                                    <div class="movie-badge sci-fi">3Д</div>
+                                </div>
+                                <div class="movie-info">
+                                    <h3>Зоотрополіс-2</h3>
+                                    <div class="movie-details">
+                                        <span class="movie-genre">Сімейний, Пригоди, Анімація</span>
+                                        <span class="movie-duration">108 хв</span>
+                                    </div>
+                                    <div class="movie-tags">
+                                        <span class="tag">
+0+</span>
+                                        <span class="tag">3Д</span>
+                                        <span class="tag seats">102/150</span>
+                                    </div>
+                                    <div class="movie-showtimes">
+                                        <span class="showtime">14:00</span>
+                                        <span class="showtime">17:15</span>
+                                        <span class="showtime">21:00</span>
+                                    </div>
+                                    <div class="movie-actions">
+                                        <a href="index2.html#matrix" class="btn-movie-details">Деталі</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <button class="movies-slider-btn prev-movie-btn" onclick="prevMovieSlide()">‹</button>
+                    <button class="movies-slider-btn next-movie-btn" onclick="nextMovieSlide()">›</button>
+                </div>
+                
+                <div class="view-all-container">
+                    <a href="index2.html" class="view-all-btn">Переглянути всі фільми</a>
+                </div>
+            </section>
+
+            <!-- Таблиця з графіком на тиждень -->
+            <section class="schedule-section">
+                <div class="section-header">
+                    <h2>📅 Розклад на тиждень</h2>
+                    <div class="week-navigation">
+                        <button class="week-nav-btn" onclick="prevWeek()">‹ Попередній тиждень</button>
+                        <span class="current-week">3-9 грудня 2024</span>
+                        <button class="week-nav-btn" onclick="nextWeek()">Наступний тиждень ›</button>
+                    </div>
+                </div>
+                
+                <div class="schedule-table-container">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Час</th>
+                                <th>Понеділок<br><span class="date">03.12</span></th>
+                                <th>Вівторок<br><span class="date">04.12</span></th>
+                                <th>Середа<br><span class="date">05.12</span></th>
+                                <th>Четвер<br><span class="date">06.12</span></th>
+                                <th>П'ятниця<br><span class="date">07.12</span></th>
+                                <th>Субота<br><span class="date">08.12</span></th>
+                                <th>Неділя<br><span class="date">09.12</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time-slot">10:00</td>
+                                <td><div class="schedule-movie" data-movie="forrest-gump">Аватар: Вогонь і Попіл<br><span>Зал 1 • 4K</span></div></td>
+                                <td><div class="schedule-movie" data-movie="lviv-stories">Потяг до Різдва<br><span>Зал 2 • 2D</span></div></td>
+                                <td><div class="schedule-movie" data-movie="matrix">Зоотрополіс-2<br><span>Зал 3 • IMAX</span></div></td>
+                                <td><div class="schedule-movie" data-movie="lion-heart">Ти - Космос<br><span>Зал 1 • 2D</span></div></td>
+                                <td><div class="schedule-movie" data-movie="forrest-gump">Аватар: Вогонь і Попіл<br><span>Зал 2 • 4K</span></div></td>
+                                <td><div class="schedule-movie" data-movie="lviv-stories">Снігова королева<br><span>Зал 3 • 2D</span></div></td>
+                                <td><div class="schedule-movie" data-movie="matrix">Зоотрополіс-2<br><span>Зал 1 • IMAX</span></div></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">14:00</td>
+                                <td><div class="schedule-movie" data-movie="lion-heart">Потяг до Різдва<br><span>Зал 1 • 2D</span></div></td>
+                                <td><div class="schedule-movie" data-movie="matrix">Зоотрополіс-2<br><span>Зал 3 • IMAX</span></div></td>
+                                <td><div class="schedule-movie" data-movie="forrest-gump">Аватар: Вогонь і Попіл<br><span>Зал 2 • 4K</span></div></td>
+                                <td><div class="schedule-movie" data-movie="lviv-stories">Снігова королева<br><span>Зал 2 • 2D</span></div></td>
+                                <td><div class="schedule-movie" data-movie="lion-heart">Ти - Космос<br><span>Зал 1 • 2D</span></div></td>
+                                <td><div class="schedule-movie" data-movie="matrix">Зоотрополіс-2<br><span>Зал 3 • IMAX</span></div></td>
+                                <td><div class="schedule-movie" data-movie="forrest-gump">Аватар: Вогонь і Попіл<br><span>Зал 2 • 4K</span></div></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">18:00</td>
+                                <td><div class="schedule-movie" data-movie="matrix">Зоотрополіс-2<br><span>Зал 3 • IMAX</span></div></td>
+                                <td><div class="schedule-movie discount" data-movie="lion-heart">Ти - Космос<br><span>Зал 1 • 2D • -30%</span></div></td>
+                                <td><div class="schedule-movie" data-movie="lviv-stories">Снігова королева<br><span>Зал 2 • 2D</span></div></td>
+                                <td><div class="schedule-movie" data-movie="forrest-gump">Аватар: Вогонь і Попіл<br><span>Зал 1 • 4K</span></div></td>
+                                <td><div class="schedule-movie" data-movie="matrix">Зоотрополіс-2<br><span>Зал 3 • IMAX</span></div></td>
+                                <td><div class="schedule-movie" data-movie="lion-heart">Потяг до Різдва<br><span>Зал 1 • 2D</span></div></td>
+                                <td><div class="schedule-movie" data-movie="lviv-stories">Снігова королева<br><span>Зал 2 • 2D</span></div></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">21:00</td>
+                                <td><div class="schedule-movie" data-movie="lviv-stories">Львівські історії<br><span>Зал 2 • 2D</span></div></td>
+                                <td><div class="schedule-movie discount" data-movie="forrest-gump">Аватар: Вогонь і Попіл<br><span>Зал 1 • 4K • -30%</span></div></td>
+                                <td><div class="schedule-movie" data-movie="lion-heart">Ти - Космос<br><span>Зал 1 • 2D</span></div></td>
+                                <td><div class="schedule-movie" data-movie="matrix">Зоотрополіс-2<br><span>Зал 3 • IMAX</span></div></td>
+                                <td><div class="schedule-movie" data-movie="lviv-stories">Снігова королева<br><span>Зал 2 • 2D</span></div></td>
+                                <td><div class="schedule-movie" data-movie="forrest-gump">Аватар: Вогонь і Попіл<br><span>Зал 1 • 4K</span></div></td>
+                                <td><div class="schedule-movie" data-movie="matrix">Зоотрополіс-2<br><span>Зал 3 • IMAX</span></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="schedule-legend">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #8C7954;"></span>
+                        <span>Стандартний сеанс</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #BFB28A;"></span>
+                        <span>Знижка у вівторок</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #594C40;"></span>
+                        <span>IMAX формат</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Слайдер "Наші кінотеатри" -->
+            <section class="cinemas-slider-section">
+                <div class="section-header">
+                    <h2>🎭 Наші кінотеатри</h2>
+                </div>
+                
+                <div class="cinemas-slider-container">
+                    <div class="cinemas-slider" id="cinemasSlider">
+                        <!-- Кінотеатр 1 -->
+                        <div class="cinema-slide">
+                            <div class="cinema-card">
+                                <div class="cinema-image">
+                                    <img src="images/cinema1.jpg" alt="КІНОВОЛЯ зал 1">
+                                </div>
+                                <div class="cinema-info">
+                                    <h3>КІНОВОЛЯ зал 1</h3>
+                                    <p class="cinema-address">м. Львів, вул. Кіноплівкова, 7</p>
+                                    <div class="cinema-features">
+                                        <span class="cinema-feature">🎬 5 залів</span>
+                                        <span class="cinema-feature">🛋️ VIP зона</span>
+                                        <span class="cinema-feature">🍽️ Кафе-бар</span>
+                                    </div>
+                                    <div class="cinema-hours">
+                                        <p>🕐 Щодня 10:00 - 23:00</p>
+                                    </div>
+                                    <a href="index1.html?week-navigation" class="btn-cinema-details">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Кінотеатр 2 -->
+                        <div class="cinema-slide">
+                            <div class="cinema-card">
+                                <div class="cinema-image">
+                                    <img src="images/cinema2.jpg" alt="КІНОВОЛЯ зал 2">
+                                </div>
+                                <div class="cinema-info">
+                                    <h3>КІНОВОЛЯ зал 2</h3>
+                                    <p class="cinema-address">м. Львів, вул. Кіноплівкова, 7</p>
+                                    <div class="cinema-features">
+                                        <span class="cinema-feature">🎬 3 зали</span>
+                                        <span class="cinema-feature">🍿 Снек-бар</span>
+                                        <span class="cinema-feature">👶 Дитяча кімната</span>
+                                    </div>
+                                    <div class="cinema-hours">
+                                        <p>🕐 Щодня 11:00 - 22:30</p>
+                                    </div>
+                                    <a href="index1.html?week-navigation" class="btn-cinema-details">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Кінотеатр 3 -->
+                        <div class="cinema-slide">
+                            <div class="cinema-card">
+                                <div class="cinema-image">
+                                    <img src="images/cinema3.jpg" alt="КІНОВОЛЯ зал 3">
+                                </div>
+                                <div class="cinema-info">
+                                    <h3>КІНОВОЛЯ зал 3</h3>
+                                    <p class="cinema-address">м. Львів, вул. Кіноплівкова, 7</p>
+                                    <div class="cinema-features">
+                                        <span class="cinema-feature">🎬 2 зали</span>
+                                        <span class="cinema-feature">🎨 Артхаус кіно</span>
+                                        <span class="cinema-feature">☕ Кав'ярня</span>
+                                    </div>
+                                    <div class="cinema-hours">
+                                        <p>🕐 Пн-Пт 12:00 - 23:00<br>Сб-Нд 10:00 - 24:00</p>
+                                    </div>
+                                    <a href="index1.html?week-navigation" class="btn-cinema-details">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                         
+                        <!-- Кінотеатр 4 -->
+                        <div class="cinema-slide">
+                            <div class="cinema-card">
+                                <div class="cinema-image">
+                                    <img src="images/cinema4.jpg" alt="КІНОВОЛЯ зал 4">
+                                </div>
+                                <div class="cinema-info">
+                                    <h3>КІНОВОЛЯ зал 4</h3>
+                                    <p class="cinema-address">м. Львів, вул. Кіноплівкова, 7</p>
+                                    <div class="cinema-features">
+                                        <span class="cinema-feature">🍿 Снек-бар</span>
+                                        <span class="cinema-feature">👶 Дитяча кімната</span>
+                                    </div>
+                                    <div class="cinema-hours">
+                                        <p>🕐 Щодня 11:00 - 22:30</p>
+                                    </div>
+                                    <a href="index1.html?week-navigation" class="btn-cinema-details">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+
+                         
+                        <!-- Кінотеатр 5 -->
+                        <div class="cinema-slide">
+                            <div class="cinema-card">
+                                <div class="cinema-image">
+                                    <img src="images/cinema5.jpg" alt="КІНОВОЛЯ зал 5">
+                                </div>
+                                <div class="cinema-info">
+                                    <h3>КІНОВОЛЯ зал 5</h3>
+                                    <p class="cinema-address">м. Львів, вул. Кіноплівкова, 7</p>
+                                    <div class="cinema-features">
+                                        <span class="cinema-feature">🍿 каво-бар</span>
+                                        <span class="cinema-feature">👶 Дитяча кімната</span>
+                                    </div>
+                                    <div class="cinema-hours">
+                                        <p>🕐 Щодня 11:00 - 22:30</p>
+                                    </div>
+                                    <a href="index1.html?week-navigation" class="btn-cinema-details">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+
+                         
+                        <!-- Кінотеатр 6 -->
+                        <div class="cinema-slide">
+                            <div class="cinema-card">
+                                <div class="cinema-image">
+                                    <img src="images/cinema6.jpg" alt="КІНОВОЛЯ зал 6">
+                                </div>
+                                <div class="cinema-info">
+                                    <h3>КІНОВОЛЯ зал 6</h3>
+                                    <p class="cinema-address">м. Львів, вул. Кіноплівкова, 7</p>
+                                    <div class="cinema-features">
+                                        <span class="cinema-feature">🍿 Снек-бар</span>
+                                        <span class="cinema-feature">👶 Дитяча кімната</span>
+                                    </div>
+                                    <div class="cinema-hours">
+                                        <p>🕐 Щодня 11:00 - 22:30</p>
+                                    </div>
+                                    <a href="index1.html?week-navigation" class="btn-cinema-details">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="cinemas-slider-btn prev-cinema-btn" onclick="prevCinemaSlide()">‹</button>
+                    <button class="cinemas-slider-btn next-cinema-btn" onclick="nextCinemaSlide()">›</button>
+                </div>
+            </section>
+
+            <!-- Таймер до прем'єри -->
+<section class="countdown-section">
+    <div class="container">
+        <div class="countdown-card">
+            <div class="countdown-header">
+                <h2>⏳ Готуйтесь до прем'єри!</h2>
+                <div class="countdown-movie-info">
+                    <h3>«28 РОКІВ ПО ТОМУ»</h3>
+                    <p class="movie-subtitle">Продовження культової франшизи</p>
+                </div>
+            </div>
+            
+            <div class="countdown-content">
+                <!-- Ліва частина: інформація про фільм -->
+                <div class="countdown-info">
+                    <table class="movie-details-table">
+                        <tr>
+                            <td class="detail-label">Жанр:</td>
+                            <td class="detail-value">Наукова фантастика / Хоррор</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Дата виходу:</td>
+                            <td class="detail-value">30 грудня 2025 року</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Країна:</td>
+                            <td class="detail-value">Велика Британія, США</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Режисер:</td>
+                            <td class="detail-value">Денні Бойл</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="countdown-actions">
+                        <button class="btn-notify" onclick="setNotification()">
+                            <span>📢</span> Повідомити про прем'єру
+                        </button>
+                        <button class="btn-trailer" onclick="showTrailer()">
+                            <span>🎬</span> Дивитись трейлер
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Права частина: зображення та таймер -->
+                <div class="countdown-visual">
+                    <div class="movie-poster">
+                        <img src="images/photo6.jpg" alt="28 років по тому">
+                    </div>
+                    <div class="timer-wrapper">
+                        <div class="timer-display">
+                            <div class="timer-unit">
+                                <div class="timer-number" id="days">26</div>
+                                <div class="timer-label">днів</div>
+                            </div>
+                            <div class="timer-separator">:</div>
+                            <div class="timer-unit">
+                                <div class="timer-number" id="hours">02</div>
+                                <div class="timer-label">годин</div>
+                            </div>
+                            <div class="timer-separator">:</div>
+                            <div class="timer-unit">
+                                <div class="timer-number" id="minutes">26</div>
+                                <div class="timer-label">хвилин</div>
+                            </div>
+                            <div class="timer-separator">:</div>
+                            <div class="timer-unit">
+                                <div class="timer-number" id="seconds">44</div>
+                                <div class="timer-label">секунд</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Верхня частина футера -->
+            <div class="footer-top">
+                <div class="footer-grid">
+                    <!-- Колонка 1: Контактна інформація -->
+                    <div class="footer-column">
+                        <div class="footer-logo-section">
+                            <img src="images/logo.svg" alt="КІНОВОЛЯ - Логотип" class="footer-logo-img">
+                            <h2 class="footer-logo-text">КІНОВОЛЯ</h2>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-label">м. Львів, вул. Кіноплівкова, 7</div>
+                                <div class="contact-subtext">КІНОВОЛЯ Центр</div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-label">Графік роботи:</div>
+                                <div class="contact-subtext">Пн-Нд: 10:00 - 23:00</div>
+                                <div class="contact-subtext">Каса: 10:00 - 22:30</div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-label">Електронна пошта:</div>
+                                <div class="contact-subtext">dudanatala120499@gmail.com</div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-label">Телефон:</div>
+                                <div class="contact-subtext">+380 68 68 66 868</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Колонка 2: Навігація -->
+                    <div class="footer-column">
+                        <h3 class="column-title">Навігація</h3>
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="index1.html">Головна</a></li>
+                                <li><a href="index2.html">Фільми</a></li>
+                                <li><a href="index3.html">Про нас</a></li>
+                                <li><a href="index4.html">Допомога</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <!-- Колонка 3: Соціальні мережі та підписка -->
+                    <div class="footer-column">
+                        <h3 class="column-title">Соціальні мережі</h3>
+                        <div class="social-links">
+                            <a href="https://t.me/kinovolia_lviv" class="social-link" target="_blank">
+                                <span class="social-icon">📱</span>
+                                <span>Telegram</span>
+                            </a>
+                            <a href="https://www.instagram.com/nata__06_?igsh=MTJxaXdhenY0M2Iy" class="social-link" target="_blank">
+                                <span class="social-icon">📸</span>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.facebook.com/share/14Xd4yDfCMg/?mibextid=wwXIfr" class="social-link" target="_blank">
+                                <span class="social-icon">👥</span>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                        
+                        <div class="subscription-section">
+                            <h3 class="column-title">Підпишіться на оновлення</h3>
+                            <form class="subscription-form">
+                                <input type="email" placeholder="Ваша електронна пошта" required>
+                                <button type="submit">Підписатися</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Нижня частина футера -->
+            <div class="footer-bottom">
+               
+                    <div class="footer-bottom-left">
+                        <p class="copyright">&copy; 2024 КІНОВОЛЯ. Всі права захищені.</p>
+                    </div>
+                   
+               
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

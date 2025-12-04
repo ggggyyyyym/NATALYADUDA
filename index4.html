@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КІНОВОЛЯ - Кінотеатр у Львові</title>
+    
+    <!-- Фавіконки -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/logo.svg">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Верхній хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <!-- Логотип -->
+                <div class="logo">
+                    <a href="index1.html">
+                        <img src="images/logo.svg" alt="КІНОВОЛЯ - Логотип" class="logo-img">
+                        <h1>КІНОВОЛЯ</h1>
+                    </a>
+                </div>
+
+                <!-- Навігація -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index1.html">Головна</a></li>
+                        <li><a href="index2.html">Фільми</a></li>
+                        <li><a href="index3.html">Про нас</a></li>
+                        <li><a href="index4.html" class="active">Допомога</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Телефон та кнопка -->
+                <div class="header-actions">
+                    <div class="phone-display">
+                        +380 68 68 66 868
+                    </div>
+                    <div class="btn-contact-container">
+                        <a href="index4.html#contact-form" class="btn-contact">
+                            Зв'язатись
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основний слайдер (банерний) -->
+    <section class="hero-slider">
+        <div class="container">
+            <div class="slider-container">
+                <div class="slider" id="mainSlider">
+                    <!-- Слайд 1 -->
+                    <div class="slide active">
+                        <img src="images/photo1.jpg" alt="Кінотеатр КІНОВОЛЯ" class="slide-img">
+                        <div class="slide-content">
+                            <h2>Прем'єра тижня!</h2>
+                            <p class="movie-title">"Мавка. Справжній міф3"</p>
+                            <p>Епічна драма про мужність та свободу. У прокаті з 15 червня</p>
+                            <a href="index4.html" class="btn-slider">Купити квиток</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Слайд 2 -->
+                    <div class="slide">
+                        <img src="images/photo2.jpg" alt="4K кіно" class="slide-img">
+                        <div class="slide-content">
+                            <h2>Класика у новому форматі</h2>
+                            <p class="movie-title">4K реставрація</p>
+                            <p>Легендарні стрічки у якості, яку ви ще не бачили</p>
+                            <a href="index1.html" class="btn-slider">Розклад сеансів</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Слайд 3 -->
+                    <div class="slide">
+                        <img src="images/photo3.jpg" alt="Знижки у вівторок" class="slide-img">
+                        <div class="slide-content">
+                            <h2>Знижка 30%</h2>
+                            <p class="movie-title">ВІВТОРКИ - КІНОДНІ</p>
+                            <p>Щовівторка ексклюзивні сеанси зі знижкою для справжніх кіноманів</p>
+                            <a href="index2.html" class="btn-slider">Обрати фільм</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Кнопки слайдера -->
+                <button class="slider-btn prev-btn" onclick="prevSlide()">‹</button>
+                <button class="slider-btn next-btn" onclick="nextSlide()">›</button>
+                
+                <!-- Точки слайдера -->
+                <div class="slider-dots">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Розділ: Безпека понад усе -->
+    <section class="safety-section">
+        <div class="container">
+            <div class="safety-container">
+                <div class="safety-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h2 class="section-title">Безпека понад усе</h2>
+                <div class="safety-message">
+                    <p class="safety-main-text">
+                        <strong>Не хвилюйся, якщо раптом під час сеансу почнеться повітряна тривога, наша служба підтримки все зробить за тебе!</strong>
+                    </p>
+                    <p class="safety-subtext">
+                        Ми автоматично оформимо повернення квитків, щоб ти міг спокійно подбати про свою безпеку.
+                    </p>
+                </div>
+                
+                <div class="safety-procedure">
+                    <h3><i class="fas fa-siren-on"></i> Повітряна тривога</h3>
+                    <p>У випадку оголошення повітряної тривоги всі поточні сеанси зупиняються. Наші гості та співробітники кінотеатрів направляються в безпечне місце до сповіщення про відбій повітряної тривоги.</p>
+                    
+                    <div class="procedure-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Тривога менше 20 хвилин</h4>
+                                <p>Якщо повітряна тривога тривала до 20 хвилин та ми маємо можливість поновити сеанс - ти зможеш повернутись до перегляду фільму.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Тривога більше 20 хвилин</h4>
+                                <p>Якщо повітряна тривога була довше 20 хвилин, на жаль, сеанс буде відмінено.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Автоматичне повернення</h4>
+                                <p>В такому випадку служба підтримки автоматично виконає повернення всіх замовлень протягом 2 годин.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Пізні сеанси</h4>
+                                <p>Відмінені сеанси після 21:00 будуть повернуті зранку наступного дня. Просимо трішечки зачекати та планувати наступний візит вже зранку.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Розділ: Часті питання (Акардеон) -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Часті питання</h2>
+            <p class="section-subtitle">Ми підготували відповіді на найпоширеніші запитання наших гостей</p>
+            
+            <div class="faq-container">
+                <!-- Питання 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Як можна забронювати квитки онлайн?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ви можете забронювати квитки через нашу форму бронювання на цій сторінці, через додаток "КІНОВОЛЯ" або зателефонувавши за номером +380 68 68 66 868. Онлайн бронювання доступне за 30 днів до сеансу.</p>
+                    </div>
+                </div>
+                
+                <!-- Питання 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Чи можна повернути або обміняти квиток?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Так, повернення та обмін квитків можливі не пізніше ніж за 1 годину до початку сеансу. У разі оголошення повітряної тривоги повернення відбувається автоматично протягом 2 годин.</p>
+                    </div>
+                </div>
+                
+                <!-- Питання 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Чи є знижки для студентів/пенсіонерів?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Так, ми пропонуємо знижки 20% для студентів та пенсіонерів при пред'явленні відповідного посвідчення. Також щовівторка діє акція "Кінодень" зі знижкою 30% для всіх відвідувачів.</p>
+                    </div>
+                </div>
+                
+                <!-- Питання 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Де знаходиться безпечне укриття у вашому кінотеатрі?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Наш кінотеатр обладнаний сучасним укриттям на -1 поверсі, яке відповідає всім нормам безпеки. При оголошенні тривоги наші співробітники проводять всіх гостей до укриття найкоротшим шляхом.</p>
+                    </div>
+                </div>
+                
+                <!-- Питання 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Чи можна принести свою їжу в кінотеатр?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ми не обмежуємо наших гостей у цьому питанні, але пропонуємо широкий вибір снеків та напоїв у нашому барі за доступними цінами. Звертаємо вашу увагу на необхідність прибирати за собою сміття.</p>
+                    </div>
+                </div>
+                
+                <!-- Питання 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Як дістатися до вашого кінотеатр на громадському транспорті?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Наш кінотеатр знаходиться за адресою: м. Львів, вул. Кіноплівкова, 7. Поруч знаходяться зупинки трамваїв №4, №5 та автобусів №29, №47. Від центру міста можна дістатися за 15-20 хвилин.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Розділ: Форма бронювання квитків -->
+    <section class="booking-section" id="booking-form">
+        <div class="container">
+            <h2 class="section-title">Забронювати квиток</h2>
+            <p class="section-subtitle">Оберіть фільм, дату та час сеансу для зручного бронювання</p>
+            
+            <form class="booking-form" id="ticketBookingForm">
+                <div class="form-grid">
+                    <!-- Вибір фільму -->
+                    <div class="form-group">
+                        <label for="movie"><i class="fas fa-film"></i> Оберіть фільм *</label>
+                        <select id="movie" name="movie" required>
+                            <option value="">-- Виберіть фільм --</option>
+                            <option value="lion-heart">Аватар: Вогонь і Попіл (фантастика, 16+)</option>
+                            <option value="cosmic-journey">Потяг до Різдва (комедія, 6+)</option>
+                            <option value="eternal-sunshine">Зоотрополіс-2 (мультфільм, 0+)</option>
+                            <option value="shadow-warrior">Ти - Космос (фантастика, 16+)</option>
+                            <option value="family-magic">Снігова королева (анімація, 0+)</option>
+                            
+                        </select>
+                    </div>
+                    
+                    <!-- Вибір дати -->
+                    <div class="form-group">
+                        <label for="date"><i class="fas fa-calendar-alt"></i> Оберіть дату *</label>
+                        <input type="date" id="date" name="date" required min="2024-06-10">
+                    </div>
+                    
+                    <!-- Вибір часу -->
+                    <div class="form-group">
+                        <label for="time"><i class="fas fa-clock"></i> Оберіть час сеансу *</label>
+                        <select id="time" name="time" required>
+                            <option value="">-- Виберіть час --</option>
+                            <option value="10:00">10:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="20:00">20:00</option>
+                            <option value="22:30">22:30</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Кількість квитків -->
+                    <div class="form-group">
+                        <label for="tickets"><i class="fas fa-ticket-alt"></i> Кількість квитків *</label>
+                        <select id="tickets" name="tickets" required>
+                            <option value="1">1 квиток</option>
+                            <option value="2">2 квитки</option>
+                            <option value="3">3 квитки</option>
+                            <option value="4">4 квитки</option>
+                            <option value="5">5 квитків</option>
+                            <option value="6">6 квитків</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Ім'я -->
+                    <div class="form-group full-width">
+                        <label for="name"><i class="fas fa-user"></i> Ваше ім'я *</label>
+                        <input type="text" id="name" name="name" required placeholder="Введіть ваше ім'я">
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="ваш@email.com">
+                    </div>
+                    
+                    <!-- Телефон -->
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Телефон *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+380 XX XXX XX XX">
+                    </div>
+                </div>
+                
+                <!-- Коментар -->
+                <div class="form-group">
+                    <label for="comments"><i class="fas fa-comment"></i> Додаткові побажання (необов'язково)</label>
+                    <textarea id="comments" name="comments" rows="3" placeholder="Наприклад: місця в останньому ряду, доступ для людей з обмеженими можливостями тощо..."></textarea>
+                </div>
+                
+                <!-- Кнопка відправки -->
+                <div class="form-submit">
+                    <button type="submit" class="btn-booking">
+                        <i class="fas fa-check-circle"></i> Забронювати квитки
+                    </button>
+                    <p class="form-note">* Після відправки форми наш менеджер зв'яжеться з вами для підтвердження бронювання протягом 30 хвилин.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Розділ: Залишити відгук/запитання -->
+    <section class="feedback-section" id="contact-form">
+        <div class="container">
+            <div class="feedback-container">
+                <div class="feedback-header">
+                    <h2 class="section-title">Залишити відгук або запитання</h2>
+                    <p class="section-subtitle">Ваша думка важлива для нас! Залиште ваш відгук або запитання, і ми обов'язково відповімо</p>
+                </div>
+                
+                <div class="feedback-content">
+                    <div class="feedback-info">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Швидка відповідь</h3>
+                            <p>Ми відповідаємо на всі повідомлення протягом 24 годин у робочі дні</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>Ваш досвід важливий</h3>
+                            <p>Ваші відгуки допомагають нам покращувати сервіс та робити перегляд фільмів комфортнішим</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3>Допомога 24/7</h3>
+                            <p>Телефонна лінія підтримки працює щодня з 8:00 до 23:00</p>
+                        </div>
+                    </div>
+                    
+                    <form class="feedback-form" id="feedbackForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="feedback-name"><i class="fas fa-user"></i> Ваше ім'я *</label>
+                                <input type="text" id="feedback-name" name="name" required placeholder="Введіть ваше ім'я">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="feedback-email"><i class="fas fa-envelope"></i> Email *</label>
+                                <input type="email" id="feedback-email" name="email" required placeholder="ваш@email.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback-type"><i class="fas fa-tag"></i> Тип повідомлення *</label>
+                            <select id="feedback-type" name="type" required>
+                                <option value="">-- Оберіть тип --</option>
+                                <option value="question">Запитання</option>
+                                <option value="feedback">Відгук</option>
+                                <option value="complaint">Скарга</option>
+                                <option value="suggestion">Пропозиція</option>
+                                <option value="other">Інше</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback-subject"><i class="fas fa-pen"></i> Тема повідомлення *</label>
+                            <input type="text" id="feedback-subject" name="subject" required placeholder="Наприклад: Питання щодо бронювання квитків">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback-message"><i class="fas fa-edit"></i> Ваше повідомлення *</label>
+                            <textarea id="feedback-message" name="message" rows="5" required placeholder="Опишіть ваше запитання або поділіться враженнями..."></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="feedback-rating"><i class="fas fa-star"></i> Оцінка (необов'язково)</label>
+                                <div class="rating-stars">
+                                    <input type="radio" id="star5" name="rating" value="5">
+                                    <label for="star5" title="Відмінно">★</label>
+                                    <input type="radio" id="star4" name="rating" value="4">
+                                    <label for="star4" title="Добре">★</label>
+                                    <input type="radio" id="star3" name="rating" value="3">
+                                    <label for="star3" title="Нормально">★</label>
+                                    <input type="radio" id="star2" name="rating" value="2">
+                                    <label for="star2" title="Погано">★</label>
+                                    <input type="radio" id="star1" name="rating" value="1">
+                                    <label for="star1" title="Дуже погано">★</label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="file-upload">
+                                    <label for="feedback-file"><i class="fas fa-paperclip"></i> Додати файл (необов'язково)</label>
+                                    <input type="file" id="feedback-file" name="file" accept="image/*,.pdf,.doc,.docx">
+                                    <small>Макс. розмір: 5MB (JPG, PNG, PDF, DOC)</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn-feedback">
+                                <i class="fas fa-paper-plane"></i> Надіслати повідомлення
+                            </button>
+                            <p class="form-note">Натискаючи кнопку "Надіслати повідомлення", ви погоджуєтесь з обробкою ваших персональних даних</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Верхня частина футера -->
+            <div class="footer-top">
+                <div class="footer-grid">
+                    <!-- Колонка 1: Контактна інформація -->
+                    <div class="footer-column">
+                        <div class="footer-logo-section">
+                            <img src="images/logo.svg" alt="КІНОВОЛЯ - Логотип" class="footer-logo-img">
+                            <h2 class="footer-logo-text">КІНОВОЛЯ</h2>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-label">м. Львів, вул. Кіноплівкова, 7</div>
+                                <div class="contact-subtext">КІНОВОЛЯ Центр</div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-label">Графік роботи:</div>
+                                <div class="contact-subtext">Пн-Нд: 10:00 - 23:00</div>
+                                <div class="contact-subtext">Каса: 10:00 - 22:30</div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-label">Електронна пошта:</div>
+                                <div class="contact-subtext">dudanatala120499@gmail.com</div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-label">Телефон:</div>
+                                <div class="contact-subtext">+380 68 68 66 868</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Колонка 2: Навігація -->
+                    <div class="footer-column">
+                        <h3 class="column-title">Навігація</h3>
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="index1.html">Головна</a></li>
+                                <li><a href="index2.html">Фільми</a></li>
+                                <li><a href="index3.html">Про нас</a></li>
+                                <li><a href="index4.html" class="active">Допомога</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <!-- Колонка 3: Соціальні мережі та підписка -->
+                    <div class="footer-column">
+                        <h3 class="column-title">Соціальні мережі</h3>
+                        <div class="social-links">
+                            <a href="https://t.me/kinovolia_lviv" class="social-link" target="_blank">
+                                <span class="social-icon">📱</span>
+                                <span>Telegram</span>
+                            </a>
+                            <a href="https://www.instagram.com/nata__06_?igsh=MTJxaXdhenY0M2Iy" class="social-link" target="_blank">
+                                <span class="social-icon">📸</span>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.facebook.com/share/14Xd4yDfCMg/?mibextid=wwXIfr" class="social-link" target="_blank">
+                                <span class="social-icon">👥</span>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                        
+                        <div class="subscription-section">
+                            <h3 class="column-title">Підпишіться на оновлення</h3>
+                            <form class="subscription-form">
+                                <input type="email" placeholder="Ваша електронна пошта" required>
+                                <button type="submit">Підписатися</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Нижня частина футера -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p class="copyright">&copy; 2024 КІНОВОЛЯ. Всі права захищені.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
